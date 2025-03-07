@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Farm.SellPage">
+
+    <!-- Use Grid to hold ScrollView (expandable) and Navigation (fixed bottom) -->
+    <Grid RowDefinitions="*, Auto">
+
+        <!-- Scrollable Content -->
+        <ScrollView Grid.Row="0">
+            <StackLayout Padding="20">
+                <!-- Title -->
+                <Label Text="Request the ward to sell the crops" FontSize="Large" FontAttributes="Bold" />
+
+                <!-- Crop Name -->
+                <Label Text="Crops Name" FontSize="Medium" />
+                <Entry Placeholder="Crop's Name" x:Name="CropNameEntry"/>
+
+                <!-- Crop Quantity -->
+                <Label Text="Crop's Quantity" FontSize="Medium" />
+                <Grid ColumnDefinitions="2*, 1*">
+                    <Entry Grid.Column="0" Placeholder="Amount of crop" x:Name="CropQuantityEntry"/>
+                    <Picker Grid.Column="1" Title="Unit" x:Name="CropUnitPicker">
+                        <Picker.Items>
+                            <x:String>kg</x:String>
+                            <x:String>Ton</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Grid>
+
+                <!-- Harvest Time -->
+                <Label Text="Harvest time" FontSize="Medium" />
+                <DatePicker x:Name="HarvestDatePicker" Format="yyyy-MM-dd"/>
+
+                <!-- Submit Button -->
+                <Button Text="Submit" BackgroundColor="Green" TextColor="White" Clicked="SubmitButton_Clicked"/>
+
+                <!-- Old Tickets -->
+                <Label Text="Old Tickets" FontSize="Large" FontAttributes="Bold" Margin="0,20,0,0" />
+                <ListView ItemsSource="{Binding OldTickets}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="10">
+                                    <Label Text="{Binding Date}" FontAttributes="Bold" />
+                                    <Label Text="{Binding CropName}" />
+                                    <Label Text="{Binding Quantity}" />
+                                    <Label Text="{Binding Status}" TextColor="{Binding StatusColor}" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Bottom Navigation -->
+        <Grid VerticalOptions="End" HeightRequest="80" BackgroundColor="White" Padding="0,5,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Home Button -->
+            <StackLayout Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
+                <ImageButton Source="https://uxwing.com/wp-content/themes/uxwing/download/buildings-architecture-real-estate/house-icon.png"
+                     BackgroundColor="Transparent"
+                     BorderWidth="0"
+                     Aspect="AspectFit"
+                     WidthRequest="30"
+                     HeightRequest="30"
+                     Clicked="HomeButton_Clicked"/>
+                <Label Text="Home" FontSize="12" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+
+            <!-- Collection Button -->
+            <StackLayout Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
+                <ImageButton Source="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/archive-line-icon.png"
+                     BackgroundColor="Transparent"
+                     BorderWidth="0"
+                     Aspect="AspectFit"
+                     WidthRequest="30"
+                     HeightRequest="30"
+                     Clicked="CollectionButton_Clicked"/>
+                <Label Text="Collection" FontSize="12" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+
+            <!-- Sell Button -->
+            <StackLayout Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center">
+                <ImageButton Source="https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/shopping-bag-checkmark-icon.png"
+                     BackgroundColor="Transparent"
+                     BorderWidth="0"
+                     Aspect="AspectFit"
+                     WidthRequest="30"
+                     HeightRequest="30"
+                     Clicked="SellButton_Clicked"/>
+                <Label Text="Sell" FontSize="12" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+
+            <!-- More Button -->
+            <StackLayout Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center">
+                <ImageButton Source="https://icon-library.com/images/more-icon/more-icon-16.jpg"
+                     BackgroundColor="Transparent"
+                     BorderWidth="0"
+                     Aspect="AspectFit"
+                     WidthRequest="30"
+                     HeightRequest="30"
+                     Clicked="MoreButton_Clicked"/>
+                <Label Text="More" FontSize="12" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

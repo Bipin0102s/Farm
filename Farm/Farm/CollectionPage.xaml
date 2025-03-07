@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Farm.CollectionPage">
+    <Grid>
+        <ScrollView>
+            <StackLayout Padding="15">
+                <!-- Header -->
+                <Label Text="Collection" FontSize="22" FontAttributes="Bold" TextColor="Black"/>
+                <Label Text="The crops listed below are being collected at your ward office." 
+                       FontSize="14" TextColor="Gray" Margin="0,5,0,10"/>
+
+                <!-- Crop Collection List -->
+                <StackLayout Spacing="10">
+                    <!-- Corn Item -->
+                    <Frame CornerRadius="10" Padding="10" BorderColor="LightGray">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="https://www.bhg.com/thmb/CW7wrStDiGAaHprdDT7dYIgnz8c=/1500x0/filters:no_upscale():strip_icc()/when-to-harvest-corn-for-sweetest-ears-6749235-01-2e11a328ae9f4ee5a0f531af74e67cc0.jpg" HeightRequest="60" WidthRequest="80" Aspect="AspectFill"/>
+                            <StackLayout Padding="10,0,0,0">
+                                <Label Text="Corn - 200 Kg" FontSize="16" FontAttributes="Bold"/>
+                                <Label Text="From May 2 to May 20" FontSize="12" TextColor="Gray"/>
+                                <Label Text="10:00 AM to 5:00 PM" FontSize="12" TextColor="Gray"/>
+                                <Label Text="Rs. 200 per kilo" FontSize="14" TextColor="Green" FontAttributes="Bold"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <!-- Rice Item -->
+                    <Frame CornerRadius="10" Padding="10" BorderColor="LightGray">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="https://images.immediate.co.uk/production/volatile/sites/10/2018/03/2048x1365-Best-strawberries-to-grow-LI1834878-9b05a14.jpg" HeightRequest="60" WidthRequest="80" Aspect="AspectFill"/>
+                            <StackLayout Padding="10,0,0,0">
+                                <Label Text="Strawberry - 300 Kg" FontSize="16" FontAttributes="Bold"/>
+                                <Label Text="From May 2 to May 20" FontSize="12" TextColor="Gray"/>
+                                <Label Text="10:00 AM to 5:00 PM" FontSize="12" TextColor="Gray"/>
+                                <Label Text="Rs. 200 per kilo" FontSize="14" TextColor="Green" FontAttributes="Bold"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <!-- Contact Information -->
+                <Label Text="For more information, you can contact the following phone number." 
+                       FontSize="14" TextColor="Gray" Margin="0,20,0,5" HorizontalOptions="Center"/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Image Source="phone_icon.png" HeightRequest="20" WidthRequest="20"/>
+                    <Label Text="9876541230" FontSize="16" TextColor="Green"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Bottom Navigation -->
+        <Grid VerticalOptions="End" HeightRequest="80" BackgroundColor="White" Padding="0,5,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Home Button -->
+            <StackLayout Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
+                <ImageButton Source="https://uxwing.com/wp-content/themes/uxwing/download/buildings-architecture-real-estate/house-icon.png"
+                     BackgroundColor="Transparent"
+                     BorderWidth="0"
+                     Aspect="AspectFit"
+                     WidthRequest="30"
+                     HeightRequest="30"
+                     Clicked="HomeButton_Clicked"/>
+                <Label Text="Home" FontSize="12" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+
+            <!-- Collection Button -->
+            <StackLayout Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
+                <ImageButton Source="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/archive-line-icon.png"
+                     BackgroundColor="Transparent"
+                     BorderWidth="0"
+                     Aspect="AspectFit"
+                     WidthRequest="30"
+                     HeightRequest="30"
+                     Clicked="CollectionButton_Clicked"/>
+                <Label Text="Collection" FontSize="12" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+
+            <!-- Sell Button -->
+            <StackLayout Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center">
+                <ImageButton Source="https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/shopping-bag-checkmark-icon.png"
+                     BackgroundColor="Transparent"
+                     BorderWidth="0"
+                     Aspect="AspectFit"
+                     WidthRequest="30"
+                     HeightRequest="30"
+                     Clicked="SellButton_Clicked"/>
+                <Label Text="Sell" FontSize="12" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+
+            <!-- More Button -->
+            <StackLayout Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center">
+                <ImageButton Source="https://icon-library.com/images/more-icon/more-icon-16.jpg"
+                     BackgroundColor="Transparent"
+                     BorderWidth="0"
+                     Aspect="AspectFit"
+                     WidthRequest="30"
+                     HeightRequest="30"
+                     Clicked="MoreButton_Clicked"/>
+                <Label Text="More" FontSize="12" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </Grid>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Farm.MorePage">
+
+    <Grid RowSpacing="0">
+        <!-- Define Rows: One for Content, One for Bottom Navigation -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <!-- Main Content (Scrollable) -->
+            <RowDefinition Height="60"/>
+            <!-- Fixed Bottom Navigation -->
+        </Grid.RowDefinitions>
+
+        <!-- Scrollable Content -->
+        <ScrollView Grid.Row="0">
+            <StackLayout Padding="20" Spacing="15">
+                <!-- User Profile Section -->
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image Source="user_icon.png" WidthRequest="24" HeightRequest="24"/>
+                    <Label Text="Bipin" FontSize="16" VerticalOptions="Center"/>
+                </StackLayout>
+
+                <!-- Options Section -->
+                <Frame HasShadow="False" Padding="10" BackgroundColor="Transparent">
+                    <StackLayout Spacing="12">
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <Image Source="feedback_icon.png" WidthRequest="20" HeightRequest="20"/>
+                            <Label Text="Give Feedback" FontSize="16" VerticalOptions="Center"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <Image Source="info_icon.png" WidthRequest="20" HeightRequest="20"/>
+                            <Label Text="About us" FontSize="16" VerticalOptions="Center"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <Image Source="question_icon.png" WidthRequest="20" HeightRequest="20"/>
+                            <Label Text="Who is this app for?" FontSize="16" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <!-- WhatsApp Chat Button -->
+                <Button Text="Chat via WhatsApp"
+                        BackgroundColor="DarkGreen"
+                        TextColor="White"
+                        CornerRadius="25"
+                        HeightRequest="50"
+                        FontSize="16"/>
+
+                <!-- Call an Expert Button -->
+                <Button Text="Call an expert"
+                        BackgroundColor="Transparent"
+                        TextColor="DarkGreen"
+                        BorderColor="DarkGreen"
+                        BorderWidth="1"
+                        CornerRadius="25"
+                        HeightRequest="50"
+                        FontSize="16"/>
+
+                <!-- Priorities Section -->
+                <Label Text="Priorities" FontAttributes="Bold" FontSize="18"/>
+
+                <StackLayout Spacing="10">
+                    <Label Text="Language" FontSize="16"/>
+                    <Label Text="Notification" FontSize="16"/>
+                </StackLayout>
+
+                <!-- Logout -->
+                <Label Text="Log Out" TextColor="Red" FontSize="16" FontAttributes="Bold"/>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Bottom Navigation Bar -->
+        <Grid VerticalOptions="End" HeightRequest="80" BackgroundColor="White" Padding="0,5,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Home Button -->
+            <StackLayout Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
+                <ImageButton Source="https://uxwing.com/wp-content/themes/uxwing/download/buildings-architecture-real-estate/house-icon.png"
+                     BackgroundColor="Transparent"
+                     BorderWidth="0"
+                     Aspect="AspectFit"
+                     WidthRequest="30"
+                     HeightRequest="30"
+                     Clicked="HomeButton_Clicked"/>
+                <Label Text="Home" FontSize="12" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+
+            <!-- Collection Button -->
+            <StackLayout Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
+                <ImageButton Source="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/archive-line-icon.png"
+                     BackgroundColor="Transparent"
+                     BorderWidth="0"
+                     Aspect="AspectFit"
+                     WidthRequest="30"
+                     HeightRequest="30"
+                     Clicked="CollectionButton_Clicked"/>
+                <Label Text="Collection" FontSize="12" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+
+            <!-- Sell Button -->
+            <StackLayout Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center">
+                <ImageButton Source="https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/shopping-bag-checkmark-icon.png"
+                     BackgroundColor="Transparent"
+                     BorderWidth="0"
+                     Aspect="AspectFit"
+                     WidthRequest="30"
+                     HeightRequest="30"
+                     Clicked="SellButton_Clicked"/>
+                <Label Text="Sell" FontSize="12" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+
+            <!-- More Button -->
+            <StackLayout Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center">
+                <ImageButton Source="https://icon-library.com/images/more-icon/more-icon-16.jpg"
+                     BackgroundColor="Transparent"
+                     BorderWidth="0"
+                     Aspect="AspectFit"
+                     WidthRequest="30"
+                     HeightRequest="30"
+                     Clicked="MoreButton_Clicked"/>
+                <Label Text="More" FontSize="12" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

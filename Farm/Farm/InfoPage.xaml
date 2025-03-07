@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Farm.InfoPage">
+    <ScrollView>
+        <StackLayout Padding="15">
+
+            <!-- Crop Image -->
+            <Image Source="https://www.bhg.com/thmb/CW7wrStDiGAaHprdDT7dYIgnz8c=/1500x0/filters:no_upscale():strip_icc()/when-to-harvest-corn-for-sweetest-ears-6749235-01-2e11a328ae9f4ee5a0f531af74e67cc0.jpg" Aspect="AspectFill" HeightRequest="200" />
+
+            <!-- Crop Title and Description -->
+            <Label Text="Corn" FontSize="22" FontAttributes="Bold" Margin="0,10,0,0"/>
+            <Label Text="Get expert advice for your plant and plant disease problems."
+                   FontSize="14"
+                   TextColor="Gray"/>
+
+            <Label Text="Disease"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   TextColor="Green"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="#E8F5E9"
+                   Padding="10"
+                   
+                   Margin="0,10,0,10"/>
+
+            <!-- Disease Section -->
+            <Label Text="Diseases" FontSize="18" FontAttributes="Bold" Margin="0,10,0,5"/>
+            <Label Text="All pests and diseases that may appear in the crop at different stages."
+                   FontSize="14"
+                   TextColor="Gray"
+                   Margin="0,0,0,10"/>
+
+            <!-- Disease Grid -->
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" ColumnSpacing="10" RowSpacing="10">
+
+                <!-- Disease 1 -->
+                <StackLayout Grid.Row="0" Grid.Column="0" Padding="5">
+                    <Image Source="https://extension.umn.edu/sites/extension.umn.edu/files/styles/caption_medium/public/northernleafblight_600px.jpg" Aspect="AspectFill" HeightRequest="80" />
+                    <Label Text="Virus" FontSize="12" TextColor="Gray"/>
+                    <Label Text="Corn leaf blight:" FontSize="14" FontAttributes="Bold"/>
+                    <Label Text="Before corn starts growing" FontSize="12" TextColor="Gray"/>
+                </StackLayout>
+
+                <!-- Disease 2 -->
+                <StackLayout Grid.Row="0" Grid.Column="1" Padding="5">
+                    <Image Source="https://assets.syngentaebiz.com/images/GrayLeafSpotLow-Res.jpg" Aspect="AspectFill" HeightRequest="80" />
+                    <Label Text="Virus" FontSize="12" TextColor="Gray"/>
+                    <Label Text="Gray leaf spot" FontSize="14" FontAttributes="Bold"/>
+                    <Label Text="Before corn starts growing" FontSize="12" TextColor="Gray"/>
+                </StackLayout>
+
+                <!-- Disease 3 -->
+                <StackLayout Grid.Row="1" Grid.Column="0" Padding="5">
+                    <Image Source="https://cropprotectionnetwork.org/image?s=%2Fimg%2Fhttp%2Fgeneral%2Fsouthern-rust-Adam-Sisson-35.jpg%2F10c17192a0270e4f17e97b762b2da817.jpg" Aspect="AspectFill" HeightRequest="80" />
+                    <Label Text="Virus" FontSize="12" TextColor="Gray"/>
+                    <Label Text="Southern rust" FontSize="14" FontAttributes="Bold"/>
+                    <Label Text="Before corn starts growing" FontSize="12" TextColor="Gray"/>
+                </StackLayout>
+
+                <!-- Disease 4 -->
+                <StackLayout Grid.Row="1" Grid.Column="1" Padding="5">
+                    <Image Source="https://www.apsnet.org/edcenter/apsnetfeatures/Article%20Images/strom3.jpg" Aspect="AspectFill" HeightRequest="80" />
+                    <Label Text="Fungus" FontSize="12" TextColor="Gray"/>
+                    <Label Text="Gray leaf spot" FontSize="14" FontAttributes="Bold"/>
+                    <Label Text="Before corn starts growing" FontSize="12" TextColor="Gray"/>
+                </StackLayout>
+
+            </Grid>
+
+            <!-- Health Inspection Section -->
+            <Frame BackgroundColor="White" CornerRadius="10" Padding="10" Margin="0,20,0,0" HasShadow="True">
+                <StackLayout>
+                    <Label Text="Crop and Animal Health Inspection" FontSize="16" FontAttributes="Bold"/>
+                    <Label Text="Get expert advice for your plant and plant disease problems."
+                           FontSize="14"
+                           TextColor="Gray"
+                           Margin="0,5,0,10"/>
+
+                    <!-- WhatsApp Button -->
+                    <Button Text="Chat via WhatsApp"
+                            BackgroundColor="DarkGreen"
+                            TextColor="White"
+                            CornerRadius="20"
+                            HeightRequest="40"/>
+
+                    <!-- Call Button -->
+                    <Button Text="📞 Call an expert"
+                            BackgroundColor="White"
+                            TextColor="Green"
+                            BorderColor="Green"
+                            BorderWidth="1"
+                            CornerRadius="20"
+                            HeightRequest="40"
+                            Margin="0,10,0,0"/>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
