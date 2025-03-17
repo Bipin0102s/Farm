@@ -19,7 +19,7 @@ namespace Farm
         private void OnSignUpClicked(object sender, EventArgs e)
         {
             DisplayAlert("Sign Up", "Account created successfully!", "OK");
-            Navigation.PushAsync(new Login());
+            Navigation.PushAsync(new SignInPage());
         }
     }
 }
