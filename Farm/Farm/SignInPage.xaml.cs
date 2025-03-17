@@ -16,15 +16,30 @@ namespace Farm
         {
             InitializeComponent();
         }
-        private void OnLoginClicked(object sender, EventArgs e)
+        private async void OnLoginClicked(object sender, EventArgs e)
         {
-            DisplayAlert("Login", "Login successful!", "OK");
+            string username = UserEntry.Text;
+            string password = PasswordEntry.Text;
+
+            var user = await DatabaseHelper.Database.Table<User>()
+                .Where(u => u.Username == username && u.Password == password)
+                .FirstOrDefaultAsync();
+
+            if (user != null)
+            {
+                await DisplayAlert("Login", "Login successful!", "OK");
+                await Navigation.PushAsync(new MainPage()); // Navigate to the main page
+            }
+            else
+            {
+                await DisplayAlert("Login", "Invalid username or password.", "OK");
+            }
 
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MainPage());
+            Navigation.PushAsync(new Signup());
         }
     }
 }

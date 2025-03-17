@@ -5,7 +5,7 @@
     <StackLayout VerticalOptions="Center" Padding="20">
 
         <Image Source="logo.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center"/>
-        <Entry x:Name="EmailEntry" Placeholder="Email" Keyboard="Email" TextColor="Black" BackgroundColor="White"/>
+        <Entry x:Name="UserEntry" Placeholder="UserName" Keyboard="Default" TextColor="Black" BackgroundColor="White"/>
         <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" TextColor="Black" BackgroundColor="White"/>
         <Button Text="Sign Up" BackgroundColor="Green" TextColor="White" Clicked="OnSignUpClicked"/>
         </StackLayout>

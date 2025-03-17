@@ -10,8 +10,8 @@ namespace Farm
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new SignInPage();
+            MainPage = new NavigationPage(new SignInPage());
         }
 
         protected override void OnStart()

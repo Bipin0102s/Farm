@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Farm.SignInPage">
     <StackLayout VerticalOptions="Center" Padding="20">
-        <Entry x:Name="EmailEntry" Placeholder="Email" Keyboard="Email" TextColor="Black" BackgroundColor="White"/>
+        <Entry x:Name="UserEntry" Placeholder="User" Keyboard="Default" TextColor="Black" BackgroundColor="White"/>
         <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" TextColor="Black" BackgroundColor="White"/>
         <Button Text="Login" BackgroundColor="Green" TextColor="White" Clicked="OnLoginClicked"/>
         <Button Text="New User? Click here to Sign up"  BackgroundColor="White" TextColor="Black" Clicked="Button_Clicked"/>

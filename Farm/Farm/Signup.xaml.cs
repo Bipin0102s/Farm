@@ -16,10 +16,25 @@ namespace Farm
 		{
 			InitializeComponent ();
 		}
-        private void OnSignUpClicked(object sender, EventArgs e)
+        private async void OnSignUpClicked(object sender, EventArgs e)
         {
-            DisplayAlert("Sign Up", "Account created successfully!", "OK");
-            Navigation.PushAsync(new SignInPage());
+            var user = new User
+            {
+                Username = UserEntry.Text,
+                Password = PasswordEntry.Text,
+                
+            };
+
+            try
+            {
+                await DatabaseHelper.Database.InsertAsync(user);
+                await DisplayAlert("Success", "User registered successfully!", "OK");
+                await Navigation.PopAsync(); // Go back to the sign-in page
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", $"Failed to register user: {ex.Message}", "OK");
+            }
         }
     }
 }
