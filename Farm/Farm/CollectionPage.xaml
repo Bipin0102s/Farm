@@ -44,10 +44,17 @@
                 <Label Text="For more information, you can contact the following phone number." 
                        FontSize="14" TextColor="Gray" Margin="0,20,0,5" HorizontalOptions="Center"/>
 
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Image Source="phone_icon.png" HeightRequest="20" WidthRequest="20"/>
-                    <Label Text="9876541230" FontSize="16" TextColor="Green"/>
+                <StackLayout>
+                    <Label Text="Dr Sudip Bhusal (Agriculture Expert)" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" />
+
+                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                        <Image Source="https://img.freepik.com/premium-vector/black-phone-with-black-phone-it_755034-816.jpg"
+               HeightRequest="25"
+               WidthRequest="25" />
+                        <Label Text="9876541230" FontSize="16" TextColor="Green" VerticalTextAlignment="Center" />
+                    </StackLayout>
                 </StackLayout>
+
             </StackLayout>
         </ScrollView>
 

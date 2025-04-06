@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Farm.Disease1">
+    <ScrollView VerticalOptions="FillAndExpand">
+        <StackLayout Padding="20" Spacing="15">
+            <!-- Scrollable Image Section -->
+            <ScrollView Orientation="Horizontal" HeightRequest="250">
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image Source="https://assets.syngentaebiz.com/images/Gray%20Leaf%20Spot%20Low-Res.JPG" Aspect="AspectFill" HeightRequest="250" WidthRequest="380" />
+                    <Image Source="https://i.ytimg.com/vi/107Xz8HslXM/maxresdefault.jpg" Aspect="AspectFill" HeightRequest="250" WidthRequest="380" />
+                </StackLayout>
+            </ScrollView>
+
+            <!-- Virus Subheading -->
+            <Label Text="Virus" FontSize="20" FontAttributes="Bold" TextColor="Green" />
+
+            <!-- Disease Title -->
+            <Label Text="Gray leaf spot" FontSize="22" FontAttributes="Bold" />
+
+            <!-- Disease Description -->
+            <Label Text="Small, gray to tan lesions with dark borders appear on the leaves. These spots may expand and merge, causing extensive blighting." FontSize="16" />
+
+            <!-- Contact Buttons -->
+            <StackLayout Orientation="Horizontal" Spacing="15">
+                <Button Text="Via WhatsApp" BackgroundColor="Black" TextColor="White" CornerRadius="20" WidthRequest="150" HeightRequest="50" />
+                <Button Text="Call an Expert" BackgroundColor="White" TextColor="Green" BorderColor="Green" BorderWidth="2" CornerRadius="20" WidthRequest="150" HeightRequest="50" />
+            </StackLayout>
+
+            <!-- Underline Separator -->
+            <BoxView HeightRequest="1" BackgroundColor="Green" Margin="0,10,0,0" HorizontalOptions="FillAndExpand" />
+
+            <!-- Symptoms Section -->
+            <Label Text="Symptoms:" FontSize="20" TextColor="Black" />
+            <Label Text="- Small, rectangular gray to tan lesions on the leaves with dark brown borders." FontSize="16" />
+            <Label Text="- Lesions may coalesce, leading to large dead areas and eventual leaf drop." FontSize="16" />
+
+            <!-- Treatment Section -->
+            <Label Text="Treatment:" FontSize="20" TextColor="Black" />
+            <Label Text="- Rotate crops to reduce the buildup of the disease in the soil." FontSize="16" />
+            <Label Text="- Use fungicides recommended for gray leaf spot management." FontSize="16" />
+
+            <!-- Prevention Section -->
+            <Label Text="Prevention:" FontSize="20" TextColor="Black" />
+            <Label Text="- Avoid overhead irrigation to reduce leaf wetness." FontSize="16" />
+            <Label Text="- Select and plant disease-resistant hybrids or varieties." FontSize="16" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -37,21 +37,29 @@
                 <Button Text="Submit" BackgroundColor="Green" TextColor="White" Clicked="SubmitButton_Clicked"/>
 
                 <!-- Old Tickets -->
-                <Label Text="Old Tickets" FontSize="Large" FontAttributes="Bold" Margin="0,20,0,0" />
-                <ListView ItemsSource="{Binding OldTickets}">
+                <Label Text="Submitted Tickets" FontAttributes="Bold" FontSize="Medium" Margin="10,20,10,0" />
+
+                <ListView x:Name="TicketsListView"
+          Margin="10"
+          HasUnevenRows="True"
+          SeparatorVisibility="Default"
+          ItemSelected="TicketsListView_ItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <ViewCell>
+                            <ViewCell Tapped="TicketsListView_ItemTapped">
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="Edit" Clicked="OnEditClicked" CommandParameter="{Binding .}" />
+                                    <MenuItem Text="Delete" Clicked="OnDeleteClicked" CommandParameter="{Binding .}" IsDestructive="True" />
+                                </ViewCell.ContextActions>
                                 <StackLayout Padding="10">
-                                    <Label Text="{Binding Date}" FontAttributes="Bold" />
-                                    <Label Text="{Binding CropName}" />
-                                    <Label Text="{Binding Quantity}" />
-                                    <Label Text="{Binding Status}" TextColor="{Binding StatusColor}" />
+                                    <Label Text="{Binding CropName}" FontAttributes="Bold" FontSize="16"/>
+                                    <Label Text="{Binding QuantityDisplay}" FontSize="Small" TextColor="Gray"/>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+
             </StackLayout>
         </ScrollView>
 

@@ -25,6 +25,7 @@ namespace Farm
 
                     // Create the User table if it doesn't exist
                     _database.CreateTableAsync<User>().Wait();
+                    _database.CreateTableAsync<CropSale>().Wait();
                 }
                 return _database;
             }

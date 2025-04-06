@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Farm.Disease">
+    <ScrollView VerticalOptions="FillAndExpand">
+        <StackLayout Padding="20" Spacing="15">
+            <!-- Scrollable Image Section -->
+            <ScrollView Orientation="Horizontal" HeightRequest="250">
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image Source="https://extension.umn.edu/sites/extension.umn.edu/files/styles/caption_medium/public/northernleafblight_600px.jpg" Aspect="AspectFill" HeightRequest="250" WidthRequest="380" />
+                    <Image Source="https://extension.umn.edu/sites/extension.umn.edu/files/northernleafblight2_600px.jpg" Aspect="AspectFill" HeightRequest="250" WidthRequest="380" />
+                </StackLayout>
+            </ScrollView>
+
+            <!-- Virus Subheading -->
+            <Label Text="Virus" FontSize="20" FontAttributes="Bold" TextColor="Green" />
+
+            <!-- Disease Title -->
+            <Label Text="CORN LEAF BLIGHT:" FontSize="22" FontAttributes="Bold" />
+
+            <!-- Disease Description -->
+            <Label Text="Large, eye-shaped brown spots appear on the leaves. Later, the spots merge and the leaves dry out." FontSize="16" />
+
+            <!-- Contact Buttons -->
+            <StackLayout Orientation="Horizontal" Spacing="15">
+                <Button Text="Via WhatsApp" BackgroundColor="Black" TextColor="White" CornerRadius="20" WidthRequest="150" HeightRequest="50" />
+                <Button Text="Call an Expert" BackgroundColor="White" TextColor="Green" BorderColor="Green" BorderWidth="2" CornerRadius="20" WidthRequest="150" HeightRequest="50" />
+            </StackLayout>
+
+            <!-- Underline Separator -->
+            <BoxView HeightRequest="1" BackgroundColor="Green" Margin="0,10,0,0" HorizontalOptions="FillAndExpand" />
+
+            <!-- Symptoms Section -->
+            <Label Text="Symptoms:" FontSize="20" TextColor="Black" />
+            <Label Text="- Large, eye-shaped brown spots appear on the leaves. Later, the spots merge and the leaves dry out." FontSize="16" />
+            <Label Text="- Long, water-soaked streaks appear on the young leaves of the kale plant, which later turn brown." FontSize="16" />
+
+            <!-- Treatment Section -->
+            <Label Text="Treatment:" FontSize="20" TextColor="Black" />
+            <Label Text="- Thoroughly bury or decompose all diseased plant residues during tillage." FontSize="16" />
+            <Label Text="- Plant disease-resistant varieties." FontSize="16" />
+
+            <!-- Prevention Section -->
+            <Label Text="Prevention:" FontSize="20" TextColor="Black" />
+            <Label Text="- Thoroughly bury or decompose all diseased plant residues during tillage." FontSize="16" />
+            <Label Text="- Treat seeds with Bevistin at the rate of 2 grams per kg of seeds." FontSize="16" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
