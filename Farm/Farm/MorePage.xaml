@@ -18,7 +18,7 @@
             <StackLayout Padding="20" Spacing="15">
                 <!-- User Profile Section -->
                 <StackLayout Orientation="Horizontal" Spacing="10">
-                    <Image Source="user_icon.png" WidthRequest="24" HeightRequest="24"/>
+                    <Image Source="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" WidthRequest="24" HeightRequest="24"/>
                     <Label Text="Bipin" FontSize="16" VerticalOptions="Center"/>
                 </StackLayout>
 
@@ -26,17 +26,17 @@
                 <Frame HasShadow="False" Padding="10" BackgroundColor="Transparent">
                     <StackLayout Spacing="12">
                         <StackLayout Orientation="Horizontal" Spacing="10">
-                            <Image Source="feedback_icon.png" WidthRequest="20" HeightRequest="20"/>
+                            <Image Source="https://static-00.iconduck.com/assets.00/feedback-icon-2048x2048-6vgz9j2x.png" WidthRequest="20" HeightRequest="20"/>
                             <Label Text="Give Feedback" FontSize="16" VerticalOptions="Center"/>
                         </StackLayout>
 
                         <StackLayout Orientation="Horizontal" Spacing="10">
-                            <Image Source="info_icon.png" WidthRequest="20" HeightRequest="20"/>
+                            <Image Source="https://wikis.tid.es/gvp-public/images/7/71/Infobox_info_icon.svg.png" WidthRequest="20" HeightRequest="20"/>
                             <Label Text="About us" FontSize="16" VerticalOptions="Center"/>
                         </StackLayout>
 
                         <StackLayout Orientation="Horizontal" Spacing="10">
-                            <Image Source="question_icon.png" WidthRequest="20" HeightRequest="20"/>
+                            <Image Source="https://png.pngtree.com/png-vector/20190420/ourmid/pngtree-question-mark-vector-icon-png-image_963976.jpg" WidthRequest="20" HeightRequest="20"/>
                             <Label Text="Who is this app for?" FontSize="16" VerticalOptions="Center"/>
                         </StackLayout>
                     </StackLayout>
@@ -48,7 +48,8 @@
                         TextColor="White"
                         CornerRadius="25"
                         HeightRequest="50"
-                        FontSize="16"/>
+                        FontSize="16"
+                        Clicked="Button_Clicked"/>
 
                 <!-- Call an Expert Button -->
                 <Button Text="Call an expert"
@@ -69,7 +70,22 @@
                 </StackLayout>
 
                 <!-- Logout -->
-                <Label Text="Log Out" TextColor="Red" FontSize="16" FontAttributes="Bold"/>
+                <Button Text="Log Out"
+        TextColor="White"
+        BackgroundColor="#D32F2F"  
+                    FontAttributes="Bold"
+        FontSize="16"
+        CornerRadius="20"
+        HorizontalOptions="Center"
+        VerticalOptions="End"
+        WidthRequest="200"
+        Padding="12,8"
+        
+        TranslationY="10"
+        Clicked="OnLogoutClicked">
+                   
+                </Button>
+
             </StackLayout>
         </ScrollView>
 
